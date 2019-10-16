@@ -1,0 +1,6 @@
+{
+  "name": "Server Name",
+  "description": "Description",
+  "image": "heroku/nodejs",
+  "repository": "https://github.com/timothy-janssen/fieldglass-ariba-demo-mw"
+}
