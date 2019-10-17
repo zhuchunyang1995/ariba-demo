@@ -139,7 +139,7 @@ const ordinal_values = [
 	"ninth",
 	"tenth",
 	"eleventh",
-	"12th",
+	"twelfth",
 	"thirteenth",
 	"fourteenth",
 	"fifteenth",
@@ -382,12 +382,14 @@ exports.call_api_approval_confirm = function(memory){
 exports.call_api_comment_confirm = function(req){
 	comments = req.body.nlp.source;
 	selected_approval = req.body.conversation.memory.selected_approval;
+	action = req.body.conversation.memory.action;
+	if (typeof action === 'undefined') action = "";
 
 	res_data.reply = [{
 		"type":"text",
 		"content":"Do you want to me to update the approvable with the following details: \n \n " + 
 		"Approvable id: " + selected_approval.title + "\n" + "User: " + selected_approval.details.approverId +
-		"\n" +"Action: Comment" + "\n" + "Comments: " + comments
+		"\n" +"Action: Comment " + action  + "\n" + "Comments: " + comments
 	},
 	{
 		"type":"quickReplies",
