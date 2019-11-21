@@ -203,7 +203,7 @@ exports.call_api_approval_search = function(){
 	var opts = "?realm=mytestrealm";
 
 	var get_options = {
-		uri: 	" https://openapi.ariba.com/api/approval-copilot/v1/sandbox /changes" + opts,
+		uri: 	"https://openapi.ariba.com/api/approval-copilot/v1/sandbox/changes" + opts,
 		method: "GET",
 		json: 	true,
 		headers:{
